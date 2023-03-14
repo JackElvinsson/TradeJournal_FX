@@ -1,0 +1,2 @@
+AAPL,131.11,5,2023-01-11,130.05,136.83,https://www.tradingview.com/x/Q4qixyhC/
+AAPL,123.0,5,2023-01-18,111.0,140.0,https://www.tradingview.com/x/TjiSHDiu/

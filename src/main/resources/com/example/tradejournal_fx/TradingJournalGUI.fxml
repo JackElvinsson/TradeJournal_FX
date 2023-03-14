@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Import the necessary JavaFX UI controls -->
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="345.0" prefWidth="683.0" style="-fx-background-color: #6495ED;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tradejournal_fx.TradingJournalGUIController">
+    <children>
+        <!-- TableView to display the trades -->
+        <TableView fx:id="table" layoutX="14.0" layoutY="14.0" prefHeight="200.0" prefWidth="655.0">
+            <columns>
+                <TableColumn fx:id="symbolColumn" prefWidth="75.0" text="Symbol" />
+                <TableColumn fx:id="priceColumn" prefWidth="75.0" text="Price" />
+                <TableColumn fx:id="quantityColumn" prefWidth="75.0" text="Quantity" />
+                <TableColumn fx:id="dateColumn" prefWidth="75.0" text="Date" />
+                <TableColumn fx:id="stopLossColumn" prefWidth="75.0" text="Stop Loss" />
+                <TableColumn fx:id="takeProfitColumn" prefWidth="75.0" text="Take Profit" />
+                <TableColumn fx:id="screenshotURLColumn" prefWidth="203.0" text="Screenshot URL" />
+            </columns>
+        </TableView>
+
+        <!-- TextFields to input trade information -->
+        <TextField fx:id="symbolInput" layoutX="14.0" layoutY="230.0" prefWidth="75.0" promptText="Symbol" />
+        <TextField fx:id="priceInput" layoutX="103.0" layoutY="230.0" prefWidth="75.0" promptText="Price" />
+        <TextField fx:id="quantityInput" layoutX="192.0" layoutY="230.0" prefWidth="75.0" promptText="Quantity" />
+        <DatePicker fx:id="dateInput" layoutX="281.0" layoutY="230.0" prefWidth="75.0" />
+        <TextField fx:id="stopLossInput" layoutX="370.0" layoutY="230.0" prefWidth="75.0" promptText="Stop Loss" />
+        <TextField fx:id="takeProfitInput" layoutX="459.0" layoutY="230.0" prefWidth="75.0" promptText="Take Profit" />
+        <TextField fx:id="screenshotURLInput" layoutX="14.0" layoutY="266.0" prefHeight="25.0" prefWidth="345.0" promptText="Screenshot URL" />
+
+        <!-- Button to add a new trade -->
+        <Button fx:id="recordButton" layoutX="559.0" layoutY="230.0" mnemonicParsing="false" onAction="#recordTrade" prefHeight="25.0" prefWidth="92.0" text="Add Trade" />
+
+        <!-- Button to save all trades to a file -->
+        <Button fx:id="saveButton" layoutX="559.0" layoutY="301.0" mnemonicParsing="false" onAction="#saveTrades" prefHeight="25.0" prefWidth="92.0" text="Save Trades" />
+
+        <Button fx:id="deleteButton" layoutX="559.0" layoutY="266.0" mnemonicParsing="false" onAction="#deleteTrade" prefHeight="25.0" prefWidth="92.0" text="Delete Trade" />
+
+    </children>
+   <effect>
+      <Reflection fraction="0.2" topOpacity="0.09" />
+   </effect>
+</AnchorPane>
